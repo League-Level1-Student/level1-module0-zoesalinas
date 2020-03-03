@@ -26,15 +26,16 @@ public class PhotoQuiz {
 		// 1. find an image on the internet, and put its URL in a String
 		// variable (from your browser, right click on the image, and select
 		// “Copy Image Address”)
-
 		// 2. create a variable of type "Component" that will hold your image
+Component imageHolder; 
+	String imageUrl = "https://i.pinimg.com/originals/01/c9/68/01c968268d20ad50ff6ca8b4423d522e.jpg";
 
 		// 3. use the "createImage()" method below to initialize your Component
-
+imageHolder = createImage(imageUrl);
 		// 4. add the image to the quiz window
-
+quizWindow.add(imageHolder);
 		// 5. call the pack() method on the quiz window
-
+quizWindow.pack();
 		// 6. ask a question that relates to the image
 
 		// 7. print "CORRECT" if the user gave the right answer
