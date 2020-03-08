@@ -36,22 +36,28 @@ imageHolder = createImage(imageUrl);
 quizWindow.add(imageHolder);
 		// 5. call the pack() method on the quiz window
 quizWindow.pack();
-		// 6. ask a question that relates to the image
-
+		// 6. ask a question that relates to the image.
+String input = JOptionPane.showInputDialog("Is this slime?");
 		// 7. print "CORRECT" if the user gave the right answer
-
+if(input.equals("no")) {
+	JOptionPane.showMessageDialog(null, "CORRECT");
+}
 		// 8. print "INCORRECT" if the answer is wrong
-
+else {
+	JOptionPane.showMessageDialog(null, "Wrong");
+}
 		// 9. remove the component from the quiz window (you may not see the
 		// effect of this until step 12)
-
+quizWindow.remove(imageHolder);
 		// 10. find another image and create it (might take more than one line
 		// of code)
-
+Component imageHolder2;
+String imageURL2 = "https://dl1.cbsistatic.com/i/2019/07/27/33dc7d16-3306-42ed-8276-50da3e472160/877ca91adb396d4f91cd624a38589643/imgingest-1039985783481801604.png";  
+imageHolder2 = createImage(imageURL2);
 		// 11. add the second image to the quiz window
-
+quizWindow.add(imageHolder2);
 		// 12. pack the quiz window
-
+quizWindow.pack();
 		// 13. ask another question
 
 		// 14+ check answer, say if correct or incorrect, etc.
